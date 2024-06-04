@@ -19,9 +19,20 @@ export const createDevelopmentConfig = ({ port }: IParams): IDevelopmentConfigur
       name: 'chat',
       filename: 'chat.js',
       exposes: {
-        './App': './src/components/App'
+        './App': './src/app/App'
       },
-      shared: ['react', 'react-dom']
+      shared: {
+        react: {
+          requiredVersion: '18.3.1',
+          singleton: true,
+          eager: true
+        },
+        'react-dom': {
+          requiredVersion: '18.3.1',
+          singleton: true,
+          eager: true
+        }
+      }
     })
   );
 
