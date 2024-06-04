@@ -6,7 +6,7 @@
     "build:development": "webpack --env development",
     "build:production": "webpack --env production",
     "start": "webpack serve",
-    "lint": "eslint && tsc --noEmit"
+    "lint": "eslint --fix && tsc --noEmit"
   },
   "keywords": [],
   "author": "",
@@ -39,8 +39,14 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
+    "primeflex": "^3.3.1",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.6.6",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-chat-elements": "^12.0.14",
+    "react-dom": "^18.3.1",
+    "socket.io-client": "^4.7.5",
+    "styled-components": "^6.1.11"
   },
   "overrides": {
     "eslint": "^9.3.0"

@@ -1,0 +1,8 @@
+export enum ChatEvent {
+  CONNECTED = 'CONNECTED',
+  EXCEPTION = 'exception',
+  DISCONNECTED = 'DISCONNECTED',
+  CONNECT_ERROR = 'connect_error',
+  CREATE_MESSAGE = 'CREATE_MESSAGE',
+  DELETE_MESSAGE = 'DELETE_MESSAGE'
+}

@@ -10,7 +10,7 @@ export const createProductionConfig = (): webpack.Configuration => {
       name: 'chat',
       filename: 'remoteEntry.js',
       exposes: {
-        './App': './src/components/App'
+        './App': './src/app/App'
       },
       shared: ['react', 'react-dom']
     })
