@@ -18,7 +18,7 @@ const config = ts.config(js.configs.recommended, ...ts.configs.recommended, {
   rules: {
     ...prettierPlugin.configs.recommended.rules,
     ...prettierConfig.rules,
-    'react/jsx-no-target-blank': 'off'
+    'react/jsx-no-target-blank': 'off',
   },
   languageOptions: {
     globals: {
@@ -27,11 +27,11 @@ const config = ts.config(js.configs.recommended, ...ts.configs.recommended, {
       ...globals.es2021
     },
     parserOptions: {
-      project: ['tsconfig.json']
+      project: ['tsconfig.json'],
     }
   },
   files: ['**/*.{ts,tsx}'],
-  ignores: ['node_modules', './dist/**']
+  ignores: ['node_modules', 'dist', '__generated__']
 });
 
 export default config;

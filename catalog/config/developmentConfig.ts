@@ -19,9 +19,20 @@ export const createDevelopmentConfig = ({ port }: IParams): IDevelopmentConfigur
       name: 'catalog',
       filename: 'catalog.js',
       exposes: {
-        Catalog: './src/components/App'
+        Catalog: './src/app/App'
       },
-      shared: ['react', 'react-dom']
+      shared: {
+        react: {
+          eager: true,
+          requiredVersion: '18.3.1',
+          singleton: true
+        },
+        'react-dom': {
+          eager: true,
+          requiredVersion: '18.3.1',
+          singleton: true
+        }
+      }
     })
   );
 

@@ -24,6 +24,11 @@ export const createBaseConfig = (mode: BuildMode): webpack.Configuration => ({
         use: ['style-loader', 'css-loader']
       },
       {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader'
+      },
+      {
         test: /\.tsx?$/,
         use: [
           {

@@ -5,8 +5,11 @@
   "scripts": {
     "build:development": "webpack --env development",
     "build:production": "webpack --env production",
-    "start": "webpack serve",
-    "lint": "eslint && tsc --noEmit"
+    "lint": "eslint && tsc --noEmit",
+    "generate": "graphql-codegen",
+    "start:frontend": "webpack serve",
+    "start:server": "json-graphql-server db.js -p 4000",
+    "start": "concurrently \"npm run generate\" \"npm run start:server\" \"npm run start:frontend\""
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,13 @@
   "description": "",
   "devDependencies": {
     "@eslint/js": "^9.3.0",
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/client-preset": "^4.3.0",
+    "@graphql-codegen/introspection": "4.0.3",
+    "@graphql-codegen/typescript": "^4.0.7",
+    "@graphql-codegen/typescript-resolvers": "^4.1.0",
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@parcel/watcher": "^2.4.1",
     "@types/node": "^20.12.12",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
@@ -39,6 +49,15 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
+    "@apollo/client": "^3.10.4",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.19",
+    "@mui/material": "^5.15.19",
+    "concurrently": "^8.2.2",
+    "graphql": "^16.8.1",
+    "graphql-tag": "^2.12.6",
+    "json-graphql-server": "^2.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
