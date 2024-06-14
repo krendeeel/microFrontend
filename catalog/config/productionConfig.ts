@@ -10,7 +10,7 @@ export const createProductionConfig = (): webpack.Configuration => {
       name: 'catalog',
       filename: 'catalog.js',
       exposes: {
-        Catalog: './src/app/App'
+        catalog: './src/app/App'
       },
       shared: ['react', 'react-dom']
     })

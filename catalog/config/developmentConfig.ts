@@ -19,7 +19,7 @@ export const createDevelopmentConfig = ({ port }: IParams): IDevelopmentConfigur
       name: 'catalog',
       filename: 'catalog.js',
       exposes: {
-        Catalog: './src/app/App'
+        catalog: './src/app/App'
       },
       shared: {
         react: {

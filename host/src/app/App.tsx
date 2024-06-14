@@ -5,7 +5,7 @@ const Chat = lazy(() => import('chat/App'));
 
 const catalogService: IMicroService = {
   scope: 'catalog',
-  module: 'Catalog',
+  module: 'catalog',
   url: 'http://localhost:3002/catalog.js'
 };
 
